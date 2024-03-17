@@ -3,7 +3,15 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #004aad;
+  background-color: #004AAd;
+}
+
+a {
+  transition: 1.2s ease;
+}
+
+a:hover {
+  transform: scale(1.06);
 }
 
 .multiverse-news {
@@ -76,7 +84,7 @@ h3 {
   color: #ffffff;
 }
 
-.noticias-populares ul li {
+.noticias-populares  li {
   list-style: none;
   display: flex;
   margin-top: 20px;
@@ -129,3 +137,47 @@ footer {
   text-align: center;
   padding: 20px;
 }
+
+.sinopses{
+  color: #ffffff;
+}
+
+.imagem-noticia{
+  width: 60%;
+  margin: auto;
+  display: block;
+  border: 7px solid white;
+}
+
+.titulo-noticia{
+  color: #ffffff;
+  font-size: 40px;
+  text-align: center;
+}
+
+.opiniao {
+  background-color: #ddd;
+  padding: 20px;
+  border: 10px solid white;
+}
+
+#opiniao-text {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #004AAd;
+  display: flex;
+  justify-content: end;
+  color: #ddd;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.opniao{
+  color: #004AAd;
+}
+
