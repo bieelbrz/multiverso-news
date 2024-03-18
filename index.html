@@ -6,6 +6,7 @@
     <title>Multiverse News</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<body>
     <header>
         <img class="logo" src="imagens/M-removebg-preview.png" alt="logo">
         <h1 class="multiverse-news">Multiverse News</h1>
@@ -13,7 +14,7 @@
             <ul>
                 <li><a class="elementos" href="index.html">Inicio</a></li>
                 <li><a class="elementos" href="#ultimas-noticia">Notícias</a></li>
-                <li><a class="elementos" href="#">Sobre</a></li>  
+                <li><a class="elementos" href="sobre.html">Sobre</a></li>  
             </ul>
         </nav>
     </header>
@@ -21,10 +22,17 @@
             <nav>
                 <li id="ultimas-noticia"><h2 class="ultimas-noticia">Últimas Notícias</h2></li>
                 <ul>
-                    <li><a href="noticia1.html"><img id="marvel" src="imagens/jcxmv.jpg" alt="Marvel x DC"></a> 
-                    <a href="noticia1.html"><h1 class="noticia-vingadores">Vingadores x Liga da Justiça promete ser lançado em 2025</h1></a></li>
-                    <li><a href="noticia2.html"><img class="foto-ney" src="imagens/ney no united.jpeg" alt="neymar no man united"></a>
-                    <a href="noticia2.html"><h2 class="noticia-neymar">Neymar chega ao Manchester United por 60 milhões de euros</h2></a></li>
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            <a href="noticia1.html"><img class="foto-ney" src="imagens/jcxmv.jpg" alt="vingadoresxldj"></a>
+                        </div>
+                        <div class="mySlides fade">
+                            <a href="noticia2.html"><img class="foto-ney" src="imagens/ney no united.jpeg" alt="Neymar no MU"></a>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                
                 </ul>
             </nav>
         </section>        
@@ -49,17 +57,10 @@
             <li><a href="noticia11.html"><img class="imagem" src="imagens/messi no vasco.jpg" alt="messi no vasco"></a>
             <a href="noticia11.html"><h3>Messi é anunciado no Vasco da gama, e tem contrato até 2026</h3></a></li></ul>
         </section>
-        </main>     
-        <section class="opiniao">
-            <h2 class="opniao">Opiniões dos Leitores</h2>
-            <form id="opiniao-form">
-                <textarea id="opiniao-text" placeholder="Digite sua opinião"></textarea>
-                <button type="submit">Enviar Opinião</button>
-            </form>
-            <div id="opinioes-anteriores">
-                <!-- Aqui você pode exibir opiniões anteriores -->
-            </div>
-            <p id="mensagem-sucesso" style="display: none; color: green;">Sua opinião foi enviada com sucesso!</p>
+        </main>
+        <footer>
+            <p>&copy; 2024 Multiverse News</p>
+        </footer>
     <script src="scripts.js"></script>
 </body>
 </html>

@@ -1,23 +1,22 @@
-// Após salvar a opinião (dentro do evento de submit do formulário)
-function displaySuccessMessage() {
-    const mensagemSucesso = document.getElementById('mensagem-sucesso');
-    mensagemSucesso.style.display = 'block'; // Exibe a mensagem de sucesso
+let slideIndex = 0;
+
+function showSlides(n) {
+    let slides = document.getElementsByClassName("mySlides");
+    if (n >= slides.length) {
+        slideIndex = 0;
+    } else if (n < 0) {
+        slideIndex = slides.length - 1;
+    }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[slideIndex].style.display = "block";
 }
 
-const opiniaoForm = document.getElementById('opiniao-form');
-opiniaoForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const opiniao = document.getElementById('opiniao-text').value;
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
 
-    // Salve a opinião (pode ser no localStorage ou enviar para um servidor)
-    // Exiba a opinião na seção de opiniões anteriores
-    const opiniaoElement = document.createElement('p');
-    opiniaoElement.textContent = opiniao;
-    document.getElementById('opinioes-anteriores').appendChild(opiniaoElement);
-
-    // Limpe o campo de texto
-    document.getElementById('opiniao-text').value = '';
-
-    // Exiba a mensagem de sucesso
-    displaySuccessMessage();
-});
+showSlides(slideIndex);
